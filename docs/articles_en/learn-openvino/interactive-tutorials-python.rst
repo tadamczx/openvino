@@ -16,12 +16,12 @@ Interactive Tutorials (Python)
    :caption: Notebooks
    :hidden:
 
-   notebooks_installation
-   notebooks_section_0_get_started
-   notebooks_section_1_convert__optimize
-   notebooks_section_2_model_demos
-   notebooks_section_3_model_training
-   notebooks_section_4_live_demos
+   interactive-tutorials-python/notebooks-installation
+   interactive-tutorials-python/notebooks-section-0-first-steps
+   interactive-tutorials-python/notebooks-section-1-convert-and-optimize
+   interactive-tutorials-python/notebooks-section-2-model-demos
+   interactive-tutorials-python/notebooks-section-3-model-training
+   interactive-tutorials-python/notebooks-section-4-live-demos
 
 
 
@@ -38,9 +38,9 @@ its name and the Jupyter notebook will start it in a new tab of a browser.
 .. note::
 
    `Binder <https://mybinder.org/>`__ and `Google Colab <https://colab.research.google.com/>`__
-   are free online services with limited resources. For the best performance
+   are free online services with limited ../about-openvino/additional-resources. For the best performance
    and more control, you should run the notebooks locally. Follow the
-   :doc:`Installation Guide <notebooks_installation>` in order to get information
+   :doc:`Installation Guide <interactive-tutorials-python/notebooks-installation>` in order to get information
    on how to run and manage the notebooks on your machine.
 
 
@@ -49,11 +49,11 @@ OpenVINO™ Notebooks `Github Repository. <https://github.com/openvinotoolkit/op
 
 The Jupyter notebooks are categorized into following classes:
 
--  :doc:`First steps with OpenVINO <notebooks_section_0_get_started>`
--  :doc:`Convert & Optimize <notebooks_section_1_convert__optimize>`
--  :doc:`Model Demos <notebooks_section_2_model_demos>`
--  :doc:`Model Training <notebooks_section_3_model_training>`
--  :doc:`Live Demos <notebooks_section_4_live_demos>`
+-  :doc:`First steps with OpenVINO <interactive-tutorials-python/notebooks-section-0-first-steps>`
+-  :doc:`Convert & Optimize <interactive-tutorials-python/notebooks-section-1-convert-and-optimize>`
+-  :doc:`Model Demos <interactive-tutorials-python/notebooks-section-2-model-demos>`
+-  :doc:`Model Training <interactive-tutorials-python/notebooks-section-3-model-training>`
+-  :doc:`Live Demos <interactive-tutorials-python/notebooks-section-4-live-demos>`
 
 
 Below you will find a selection of recommended tutorials that demonstrate inference on a particular model. These tutorials are guaranteed to provide a great experience with inference in OpenVINO:
@@ -85,7 +85,7 @@ Below you will find a selection of recommended tutorials that demonstrate infere
 
 .. showcase::
    :title: 279-mobilevlm-language-assistant
-   :img: _static/images/notebook_eye.png
+   :img: ../_static/images/notebook_eye.png
 
    Mobile language assistant with MobileVLM and OpenVINO.
 
@@ -97,7 +97,7 @@ Below you will find a selection of recommended tutorials that demonstrate infere
 
 .. showcase::
    :title: 275-llm-question-answering
-   :img: _static/images/notebook_eye.png
+   :img: ../_static/images/notebook_eye.png
 
    LLM Instruction-following pipeline with OpenVINO.
 
@@ -109,7 +109,7 @@ Below you will find a selection of recommended tutorials that demonstrate infere
 
 .. showcase::
    :title: 273-stable-zephyr-3b-chatbot
-   :img: _static/images/notebook_eye.png
+   :img: ../_static/images/notebook_eye.png
 
    LLM-powered chatbot using Stable-Zephyr-3b and OpenVINO.
 
@@ -122,7 +122,7 @@ Below you will find a selection of recommended tutorials that demonstrate infere
 
 
 .. note::
-   If there are any issues while running the notebooks, refer to the **Troubleshooting** and **FAQ** sections in the :doc:`Installation Guide <notebooks_installation>` or start a GitHub
+   If there are any issues while running the notebooks, refer to the **Troubleshooting** and **FAQ** sections in the :doc:`Installation Guide <interactive-tutorials-python/notebooks-installation>` or start a GitHub
    `discussion <https://github.com/openvinotoolkit/openvino_notebooks/discussions>`__.
 
 
@@ -130,7 +130,7 @@ Additional Resources
 ######################
 
 * `OpenVINO™ Notebooks - Github Repository <https://github.com/openvinotoolkit/openvino_notebooks/blob/main/README.md>`_
-* `Binder documentation <https://mybinder.readthedocs.io/en/latest/>`_
+* `Binder ../documentation <https://mybinder.readthedocs.io/en/latest/>`_
 * `Google Colab <https://colab.research.google.com/>`__
 
 

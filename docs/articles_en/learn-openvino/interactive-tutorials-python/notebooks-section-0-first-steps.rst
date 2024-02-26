@@ -1,4 +1,4 @@
-.. {#notebooks_section_0_get_started}
+.. {#notebooks_section_0_../../get-started}
 
 First steps with OpenVINO
 =========================
@@ -26,7 +26,7 @@ Brief tutorials that demonstrate how to use Python API for inference in OpenVINO
 
 .. showcase::
    :title: 002-openvino-api
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Learn the OpenVINO Python API.
 

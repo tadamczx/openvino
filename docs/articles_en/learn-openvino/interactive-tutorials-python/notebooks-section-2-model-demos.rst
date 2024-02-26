@@ -44,7 +44,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 279-mobilevlm-language-assistant
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Mobile language assistant with MobileVLM and OpenVINO.
 
@@ -68,7 +68,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 275-llm-question-answering
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    LLM Instruction-following pipeline with OpenVINO.
 
@@ -80,7 +80,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 273-stable-zephyr-3b-chatbot
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    LLM-powered chatbot using Stable-Zephyr-3b and OpenVINO.
 
@@ -108,19 +108,19 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 268-table-question-answering
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Table Question Answering using TAPAS and OpenVINO.
 
 .. showcase::
    :title: 267-distil-whisper-asr
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Automatic speech recognition using Distil-Whisper and OpenVINO.
 
 .. showcase::
    :title: 266-speculative-sampling
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Text Generation via Speculative Sampling, KV Caching, and OpenVINO.
 
@@ -150,7 +150,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 262-softvc-voice-conversion
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    SoftVC VITS Singing Voice Conversion and OpenVINO.
 
@@ -180,7 +180,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 257-videollava-multimodal-chatbot.ipynb
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Visual-language assistant with Video-LLaVA and OpenVINO.
 
@@ -192,13 +192,13 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 254-rag-chatbot
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Create an LLM-powered RAG system using OpenVINO.
 
 .. showcase::
    :title: 254-llm-chatbot
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Create an LLM-powered Chatbot using OpenVINO.
 
@@ -210,7 +210,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 252-fastcomposer-image-generation
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Image generation with FastComposer and OpenVINO™.
 
@@ -252,7 +252,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 247-code-language-id
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Identify the programming language used in an arbitrary code snippet.
 
@@ -270,7 +270,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 244-named-entity-recognition
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Named entity recognition with OpenVINO™.
 
@@ -282,7 +282,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 242-freevc-voice-conversion
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    High-Quality Text-Free One-Shot Voice Conversion with FreeVC and OpenVINO™
 
@@ -294,7 +294,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 240-dolly-2-instruction-following
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Instruction following using Databricks Dolly 2.0 and OpenVINO™.
 
@@ -432,7 +432,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 223-text-prediction
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Use pre-trained models to perform text prediction on an input sequence.
 
@@ -444,7 +444,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 221-machine-translation
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Real-time translation from English to German.
 
@@ -456,7 +456,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 219-knowledge-graphs-conve
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Optimize the knowledge graph embeddings model (ConvE) with OpenVINO.
 
@@ -469,7 +469,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 216-attention-center
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    The attention center model with OpenVINO™
 
@@ -481,7 +481,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 214-grammar-correction
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Grammatical error correction with OpenVINO.
 
@@ -499,7 +499,7 @@ Demos that demonstrate inference on a particular model.
 
 .. showcase::
    :title: 211-speech-to-text
-   :img: _static/images/notebook_eye.png
+   :img: ../../_static/images/notebook_eye.png
 
    Run inference on speech-to-text recognition model.
 

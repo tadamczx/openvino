@@ -65,6 +65,8 @@ function(build_docs)
         list(APPEND commands COMMAND cmake -DPython3_EXECUTABLE=${Python3_EXECUTABLE} -DENABLE_WHEEL=ON ${OpenVINO_SOURCE_DIR})
         list(APPEND commands COMMAND cmake --build ${OpenVINO_SOURCE_DIR}/build --parallel)
         list(APPEND commands COMMAND ls ${OpenVINO_SOURCE_DIR}/build/wheels/)
+        list(APPEND commands COMMAND ls ${OpenVINO_SOURCE_DIR}/build/)
+
         file(GLOB WHEEL_FILE "${OpenVINO_SOURCE_DIR}/build/wheels/*.whl")
         list(APPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green ${WHEEL_FILE})
         list(FILTER WHEEL_FILE EXCLUDE REGEX "dev")

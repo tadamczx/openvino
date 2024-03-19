@@ -68,7 +68,7 @@ function(build_docs)
         list(APPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green ${WHEEL_FILE})
         list(FILTER WHEEL_FILE EXCLUDE REGEX "dev")
         list(APPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green ${WHEEL_FILE})
-        list(APPEND commands COMMAND ${Python3_EXECUTABLE} -m pip install ${WHEEL_FILE})
+        list(APPEND commands COMMAND ${Python3_EXECUTABLE} -m pip install --find-links=${OpenVINO_SOURCE_DIR}/build/wheels/)
         list(APPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green "FINISHED preprocessing OpenVINO Python API")
     endif()
 

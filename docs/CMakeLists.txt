@@ -61,7 +61,9 @@ function(build_docs)
 
     if(${ENABLE_PYTHON_API})
         list(APPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green "STARTED preprocessing OpenVINO Python API")
-        list(APPEND commands COMMAND ${Python3_EXECUTABLE} -m pip install openvino)
+        list(APPEND commands COMMAND ${CMAKE_COMMAND} cmake -DPython3_EXECUTABLE=${Python3_EXECUTABLE} -DENABLE_WHEEL=ON ..)
+        list(APPEND commands COMMAND ${CMAKE_COMMAND} cmake --build . --parallel)
+        list(APPEND commands COMMAND ${CMAKE_COMMAND} pip install $(find ${OpenVINO_SOURCE_DIR}/build/wheels/ -type f ! -name "*dev*"))
         list(APPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green "FINISHED preprocessing OpenVINO Python API")
     endif()
 

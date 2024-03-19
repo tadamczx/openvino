@@ -64,7 +64,7 @@ function(build_docs)
         list(APPEND commands COMMAND ${Python3_EXECUTABLE} -m pip install -r ${OpenVINO_SOURCE_DIR}/src/bindings/python/wheel/requirements-dev.txt)
         list(APPEND commands COMMAND ${CMAKE_COMMAND} cmake -DPython3_EXECUTABLE=${Python3_EXECUTABLE} -DENABLE_WHEEL=ON ..)
         list(APPEND commands COMMAND ${CMAKE_COMMAND} cmake --build . --parallel)
-        list(APPEND commands COMMAND ${CMAKE_COMMAND} pip install $(find ${OpenVINO_SOURCE_DIR}/build/wheels/ -type f ! -name "*dev*"))
+        list(APPEND commands COMMAND ${Python3_EXECUTABLE} -m pip install $(find ${OpenVINO_SOURCE_DIR}/build/wheels/ -type f ! -name "*dev*"))
         list(APPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green "FINISHED preprocessing OpenVINO Python API")
     endif()
 

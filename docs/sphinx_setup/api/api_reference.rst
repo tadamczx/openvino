@@ -14,6 +14,7 @@ API Reference
    c_cpp_api/group__ov__cpp__api
    c_cpp_api/group__ov__c__api
    OpenVINO Node.js API <nodejs_api/nodejs_api>
+   OpenVINO GenAI API <genai_api/api>
 
 
 

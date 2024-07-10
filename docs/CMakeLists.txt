@@ -9,6 +9,7 @@ set(ENABLE_PYTHON_API OFF CACHE BOOL "Build with Python API.")
 set(ENABLE_NOTEBOOKS OFF CACHE BOOL "Build with openvino notebooks.")
 set(ENABLE_OMZ OFF CACHE BOOL "Build with open_model_zoo.")
 set(ENABLE_OVMS OFF CACHE BOOL "Build with ovms.")
+set(ENABLE_GENAI_API OFF CACHE BOOL "Build with OpenVINO GenAI API")
 set(OVMS_DOCS_DIR "" CACHE PATH "Path to model server documentation dir.")
 
 if(${ENABLE_OVMS} AND (OVMS_DOCS_DIR STREQUAL ""))
@@ -74,6 +75,14 @@ function(build_docs)
         list(PREPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green "STARTED preprocessing OpenVINO notebooks")
         list(PREPEND commands
             COMMAND ${Python3_EXECUTABLE} "${NBDOC_SCRIPT}" "${DOCS_SOURCE_DIR}/notebooks" "${SPHINX_SOURCE_DIR}/notebooks"
+        )
+        list(PREPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green "FINISHED preprocessing OpenVINO notebooks")
+    endif()
+
+    if(${ENABLE_GENAI_API})
+        list(PREPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green "STARTED preprocessing OpenVINO GenAI API")
+        list(PREPEND commands
+            COMMAND ${Python3_EXECUTABLE} -m pip install openvino-genai
         )
         list(PREPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green "FINISHED preprocessing OpenVINO notebooks")
     endif()

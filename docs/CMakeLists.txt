@@ -9,8 +9,9 @@ set(ENABLE_PYTHON_API OFF CACHE BOOL "Build with Python API.")
 set(ENABLE_NOTEBOOKS OFF CACHE BOOL "Build with openvino notebooks.")
 set(ENABLE_OMZ OFF CACHE BOOL "Build with open_model_zoo.")
 set(ENABLE_OVMS OFF CACHE BOOL "Build with ovms.")
-set(ENABLE_GENAI_API OFF CACHE BOOL "Build with OpenVINO GenAI API")
 set(OVMS_DOCS_DIR "" CACHE PATH "Path to model server documentation dir.")
+set(ENABLE_GENAI_API OFF CACHE BOOL "Build with OpenVINO GenAI API")
+set(OpenVINO_GenAI_SOURCE "" CACHE PATH "Path to OpenVINO GenAI cloned repository")
 
 if(${ENABLE_OVMS} AND (OVMS_DOCS_DIR STREQUAL ""))
     message( FATAL_ERROR "You want to build OVMS, but OVMS_DOCS_DIR variable is empty." )
@@ -37,7 +38,7 @@ function(build_docs)
     set(OV_INSTALLATION_SCRIPT "${SCRIPTS_DIR}/install_appropriate_openvino_version.py")
 
     # Doxygen/Sphinx setup
-    set(DOXYGEN_XML_OUTPUT "${DOCS_BUILD_DIR}/xml")
+    set(DOXYGEN_XML_OUTPUT "${DOCS_BUILD_DIR}/xml_genai")
     set(SPHINX_SETUP_DIR "${DOCS_SOURCE_DIR}/sphinx_setup")
     set(SPHINX_SOURCE_DIR "${DOCS_BUILD_DIR}/sphinx_source")
     set(SPHINX_OUTPUT "${DOCS_BUILD_DIR}/_build")
@@ -84,6 +85,12 @@ function(build_docs)
         list(PREPEND commands
             COMMAND ${Python3_EXECUTABLE} -m pip install openvino-genai
         )
+        set(DOXYFILE_SOURCE "${DOCS_SOURCE_DIR}/Doxyfile_GenAI.config")
+        set(DOXYFILE_BUILD "${DOCS_BUILD_DIR}/Doxyfile_GenAI.config")
+        configure_file(${DOXYFILE_SOURCE} ${DOXYFILE_BUILD} @ONLY)
+        list(APPEND commands COMMAND ${Python3_EXECUTABLE} ${REMOVE_XML_SCRIPT} ${DOXYGEN_XML_OUTPUT})
+        list(APPEND commands COMMAND ${DOXYGEN_EXECUTABLE} ${DOXYFILE_BUILD})
+        list(APPEND post_commands COMMAND ${Python3_EXECUTABLE} ${BREATHE_APIDOC_SCRIPT} ${DOXYGEN_XML_OUTPUT} -o "${SPHINX_SOURCE_DIR}/api/genai_cpp_api" -m -T -p openvino -g class,group,struct,union,enum)
         list(PREPEND commands COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --green "FINISHED preprocessing OpenVINO notebooks")
     endif()
 

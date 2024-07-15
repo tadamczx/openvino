@@ -40,7 +40,8 @@ except ImportError:
     autodoc_mock_imports = ["openvino"]
 
 breathe_projects = {
-    "openvino": "../xml/"
+    "openvino": "../xml/",
+    "openvino.genai": "../xml_genai/"
 }
 
 myst_enable_extensions = ["colon_fence"]
@@ -116,7 +117,7 @@ html_theme_options = {
 snippet_root = os.getenv("SNIPPET_ROOT", "")
 
 html_sidebars = {
-    "**": ["search-field.html", "sidebar-nav-bs.html", "sidebar-ethical-ads.html"]
+    "**": ["search-field.html", "sidebar-ethical-ads.html"]
 }
 
 html_context = {

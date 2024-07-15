@@ -117,7 +117,7 @@ html_theme_options = {
 snippet_root = os.getenv("SNIPPET_ROOT", "")
 
 html_sidebars = {
-    "**": ["search-field.html", "sidebar-ethical-ads.html"]
+    "**": ["search-field.html", "sidebar-nav-bs.html", "sidebar-ethical-ads.html"]
 }
 
 html_context = {
